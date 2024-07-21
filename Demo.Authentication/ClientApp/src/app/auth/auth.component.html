@@ -1,0 +1,35 @@
+<label>Token-based authentication</label>
+
+<div *ngIf="!isAuthenticated">
+  <div>
+    <label>Логин</label>
+    <input type="text" value="" [(ngModel)]="loginField" />
+  </div>
+  <br />
+  <div>
+    <label>Пароль</label>
+    <input title="Пароль" type="text" value="" [(ngModel)]="password" />
+  </div>
+</div>
+<br />
+<div>{{ isAuthenticated ? 'Вход выполнен"' : 'Вход не выполнен' }}</div>
+
+<div>
+  <button *ngIf="isAuthenticated"
+          (click)="logout()">Выйти</button>
+</div>
+<br />
+<div>
+  <button *ngIf="!isAuthenticated"
+          (click)="authenticate(loginField, password)">Войти</button>
+</div>
+<br />
+<div>
+  <button (click)="checkAnonymousRoute()">Отправить запрос в метод, доступный анонимным пользователям</button>
+</div>
+<br />
+<div>
+  <button (click)="checkJwtProtectedRoute()">Отправить запрос в метод, требующий авторизацию</button>
+</div>
+<br />
+
