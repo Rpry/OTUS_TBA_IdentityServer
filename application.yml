@@ -1,0 +1,13 @@
+﻿services:
+
+  ui_with_auth_via_is:
+    image: ghcr.io/rpry/otus_ui_with_auth_via_is/ui_with_auth_via_is:1.0
+    container_name: ui_with_auth_via_is
+    ports:
+      - "4200:4200"
+    tty: true
+
+networks:
+  default:
+    name: myLocalNetwork # создана извне: docker network create --driver=bridge myLocalNetwork
+    external: true
