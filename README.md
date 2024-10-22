@@ -1,6 +1,6 @@
 1. Стянуть этот проект, запустить в IDE
 2. Найти в корневом каталоге этогопроекта файл application-start.bat, запустить - он скачает и запустит образ с клиентской частью в контейнере
-3. Стянуть Identity Server отсюда https://github.com/Rpry/OTUS_IdentityServer, запустить
+3. Стянуть Identity Server отсюда https://github.com/Rpry/OTUS_IdentityServer, запустить в IDE
 4. После того как закончится действие 2, сделать проверку:
    - Открыть http://localhost:4200, нажать на Войти
    - В появившемся окне IS ввести креды alice Pass123$, залогиниться
