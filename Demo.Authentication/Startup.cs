@@ -1,3 +1,4 @@
+using Demo.Authentication.Authentication;
 using Demo.Authentication.Authorization;
 using Demo.Authentication.Data;
 using Demo.Authentication.Middleware;
@@ -33,7 +34,8 @@ namespace Demo.Authentication
                         ValidateLifetime = true,
                         ClockSkew = TimeSpan.FromSeconds(5)
                     };
-                });
+                })
+                .AddScheme<AuthSchemeOptions, AuthSchemeHandler>("MyCustomScheme", options => { });
 
             //services.AddAuthorization();
             services.AddAuthorization(op =>
