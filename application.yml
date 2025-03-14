@@ -1,7 +1,7 @@
 ﻿services:
 
   ui_with_auth_via_is:
-    image: ghcr.io/rpry/otus_ui_with_auth_via_is/ui_with_auth_via_is:1.0
+    image: ghcr.io/rpry/otus_ui_with_auth_via_is/ui_with_auth_via_is:2.0
     #image: ui_with_auth_via_is
     #container_name: ui_with_auth_via_is
     ports:
