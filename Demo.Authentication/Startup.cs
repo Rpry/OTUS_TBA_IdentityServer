@@ -32,7 +32,7 @@ namespace Demo.Authentication
                         ValidateAudience = false,
                         ValidAudience = "api1",
                         ValidateLifetime = true,
-                        ClockSkew = TimeSpan.FromSeconds(5)
+                        //ClockSkew = TimeSpan.FromSeconds(5)
                     };
                 })
                 .AddScheme<AuthSchemeOptions, AuthSchemeHandler>("MyCustomScheme", options => { });
